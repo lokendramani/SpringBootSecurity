@@ -19,4 +19,17 @@ public class HomeController {
         model.addAttribute("message",message);
         return "home";
     }
+
+    @RequestMapping("/login")
+    public String loginPage(Model model){
+        String errormessage="";
+        model.addAttribute("error",errormessage);
+        return "login";
+    }
+
+
+    @RequestMapping("/logout-success")
+    public String logout(){
+        return "logout";
+    }
 }
